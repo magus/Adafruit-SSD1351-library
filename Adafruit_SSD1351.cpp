@@ -298,7 +298,7 @@ void Adafruit_SSD1351::setRotation(uint8_t r) {
   // 2   Color remap (0: A->B->C, 1: C->B->A)
   // 1   Column remap (0: 0-127, 1: 127-0)
   // 0   Address increment (0: horizontal, 1: vertical)
-  uint8_t madctl = 0b01100100; // 64K, enable split, CBA
+  uint8_t madctl = 0b01100110; // 64K, enable split, CBA, Columns remapped (horizontal mirror)
 
   rotation = r & 3; // Clip input to valid range
 
